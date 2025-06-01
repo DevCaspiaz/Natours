@@ -1,0 +1,26 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+.row{
+    max-width: variables.$grid-width;
+    margin: 0 auto;
+    &:not(:last-child){
+        margin-bottom: variables.$gutter-vertical;
+    }
+    @include mixins.clearfix;
+    
+    [class^="col-"]{
+        float: left;
+        &:not(:last-child){
+            margin-right: variables.$gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{variables.$gutter-horizontal})/2);
+    }
+
+    .col-1-of-3{
+        width: calc((100% - 2*#{variables.$gutter-horizontal}) /3);
+    }
+    
+}
