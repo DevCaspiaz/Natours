@@ -6,14 +6,8 @@
     &:not(:last-child){
         margin-bottom: variables.$gutter-vertical;
     }
-    @include mixins.clearfix;
-    
-    [class^="col-"]{
-        float: left;
-        &:not(:last-child){
-            margin-right: variables.$gutter-horizontal;
-        }
-    }
+    display: flex;
+    gap: 1.5rem;
 
     .col-1-of-2{
         width: calc((100% - #{variables.$gutter-horizontal})/2);
