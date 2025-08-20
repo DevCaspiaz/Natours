@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as *;
 @use '../layout/grid';
 
 .row .col-1-of-4{
@@ -6,18 +6,18 @@
     gap: 5rem;
 }
 .feature-box{
-    background-color: rgb(variables.$color-white, .7);
+    background-color: rgb($color-white, .7);
     font-size: 1.5rem;
     padding: 2.5rem;
     text-align: center;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgb(variables.$color-black, .15);
+    box-shadow: 0 1.5rem 4rem rgb($color-black, .15);
     transition: all .2s;
     
     &__icon{
         font-size: 6rem !important;
         margin-bottom: .5rem;
-        background-image: linear-gradient(to right, variables.$color-primary-light, variables.$color-primary-dark);
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         background-clip: text;
         color: transparent;
     }
