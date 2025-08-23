@@ -3,7 +3,8 @@
     position: relative;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
-    &:link, &:visited{
+
+    &,&:link, &:visited{
         margin-top: 6rem;
         text-transform: uppercase;
         text-decoration: none;
@@ -12,6 +13,10 @@
         border-radius: 10rem;
         transition: all 0.3s;
         font-size: $default-font-size;
+
+        //* change for the <button>
+        border: none;
+        cursor: pointer;
     }
     &:hover{
         transform: translateY(-3px);
@@ -21,7 +26,9 @@
             opacity: 0;
         }
     }
-    &:active{
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgb($color-black, .2);
     }
