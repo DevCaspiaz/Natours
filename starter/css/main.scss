@@ -12,12 +12,12 @@
 @use './components/composition'; 
 @use './components/feature-box'; 
 @use './components/story';
-@use './components/book';
 
 
 @use './layout/navigation';
 @use './layout/header';
 @use './layout/grid';
 @use './layout/footer';
+@use './layout/popup';
 
 @use './pages/home';

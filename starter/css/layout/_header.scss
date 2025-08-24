@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 @use '../layout/grid';
 
 .header{
@@ -11,18 +12,13 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     position: relative;
     &__logo-box{
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
+        @include position-center(absolute, 4rem, 4rem, 0, 0);
         .header__logo{
             height: 3.5rem;
         }
     }
     &__text-box{
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%, -50%);
+        @include position-center($top: 40%, $left: 50%);
         text-align: center;
     }
 }

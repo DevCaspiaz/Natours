@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 .card{
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -8,9 +9,7 @@
     &__side{
         height: 52rem;
         transition: all .8s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include position-center(absolute,0,0,0,0);
         width: 100%;
         backface-visibility: hidden;
         border-radius: .3rem;
@@ -109,10 +108,7 @@
 
     //*Back Side style
     &__cta{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include position-center();
         width: 90%;
         text-align: center;
     }

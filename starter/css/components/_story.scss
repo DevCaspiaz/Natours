@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 
 //* I used: shape-outside, clip-path and float for text and image
@@ -40,10 +41,7 @@
     }
 
     &__caption{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 20%);
+        @include position-center($x: -50%, $y: 20%);
         color: $color-white;
         text-transform: uppercase;
         font-size: 1.7rem;
