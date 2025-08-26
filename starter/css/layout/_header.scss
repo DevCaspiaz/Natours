@@ -11,14 +11,33 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     position: relative;
+    display: grid;
+    align-items: flex-start;
+    
     &__logo-box{
-        @include position-center(absolute, 4rem, 4rem, 0, 0);
-        .header__logo{
-            height: 3.5rem;
+        width: max-content;
+        height: max-content;
+        display: block;
+        @include respond(phone){
+            justify-self: center;
+            align-self: center;
+        }
+    }
+    &__logo{
+        @include respond(tabLand){
+            width: 25rem;
+        }
+        @include respond(tabPort){
+            width: 23.5rem;
+        }
+        @include respond(phone){
+            width: 25rem;
         }
     }
     &__text-box{
-        @include position-center($top: 40%, $left: 50%);
+        justify-self: center;
+        display: block;
         text-align: center;
+        width: max-content;
     }
 }

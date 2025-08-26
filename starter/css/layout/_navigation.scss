@@ -21,7 +21,7 @@
         cursor: pointer;
         &--line{
             width: 50%;
-            height: 2.5px;
+            height: 1.5px;
             background-color: $color-gray-dark;
             display: block;
             position: absolute;
@@ -29,24 +29,24 @@
             border-radius: 10px;
             transform: translateX(-50%);
             transform-origin: left;
-            transition: all .3s;
+            transition: top .1s, opacity .3s, height .3s, width .3s, transform .3s;
             &:nth-of-type(1){
-                top: 25px;
+                top: 35%;
             }
             &:nth-of-type(2){
-                top: 35px;
+                top: 50%;
             }
             &:nth-of-type(3){
-                top: 45px;
+                top: 65%;
             }
 
         }
 
         &:hover &--line:nth-of-type(1){
-            top: 22px;
+            top: 33.5%;
         }
         &:hover &--line:nth-of-type(3){
-            top: 48px;
+            top: 66.5%;
         }
     }
 
@@ -62,6 +62,15 @@
         transition: transform .8s cubic-bezier(.76,.2,.28,.95);
     }
 
+
+    @include respond (tabPort){
+        &__button{
+            right: 3rem;
+        }
+        &__background{
+            right: 3rem;
+        }
+    }
     &__nav{
         height: 100vh;
         width: 0;
@@ -130,8 +139,8 @@
 
     &__checkbox:checked ~ &__button &__button--line{
         &:nth-of-type(1){
-            transform: rotate(135deg) translateX(-50%);
-            top: 35px;
+            transform: rotate(135deg) translate(-50%, 0);
+            top: 50%;
             left: 50%;
         }
         &:nth-of-type(2){
@@ -140,8 +149,8 @@
             width: 0;
         }
         &:nth-of-type(3){
-            transform: rotate(-135deg) translateX(-50%);
-            top: 35px;
+            transform: rotate(-135deg) translate(-50%, 0);
+            top: 50%;
             left: 50%;
         }
     }
