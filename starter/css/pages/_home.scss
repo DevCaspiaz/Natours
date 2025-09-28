@@ -7,7 +7,7 @@
     padding: 25rem 0;
     margin-top: -20vh;
     @include respond(tabPort){
-        margin-top: 0vh;
+        margin-top: 0;
         padding: 10rem 0 25rem;
         .row{
             display: flex;
@@ -15,8 +15,17 @@
             align-items: center;
             gap: 5rem;
             width: 100%;
-            
+            .col-1-of-2{
+                width: 70%;
+                margin-bottom: 7rem;
+            }
         }
+    @include respond(phone){
+        .col-1-of-2{
+            width: 70%;
+            margin-bottom: 2rem;
+        }
+    }
     }
     
 }
@@ -26,7 +35,7 @@
         to right bottom,
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)),
-    url(../img/nat-4.jpg);
+    url(/starter/img/nat-4.webp);
     background-size: cover;
     transform: skewY(-7deg);
     margin-top: -10rem;
@@ -97,7 +106,7 @@
     position: relative;
     .book{
         background:linear-gradient(105deg,#ffffffcb 0%, #ffffffcb 50%, transparent 50%),
-                                    url(/starter/img/nat-10.jpg);
+                                    url(/starter/img/nat-10.webp);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
