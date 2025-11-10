@@ -69,6 +69,10 @@
 
     @include respond(tab-port){
         padding: 10rem 0;
+
+        .row{
+            max-width: 80%;
+        }
     }
 }
 .book{
@@ -99,6 +103,10 @@
         @include respond(tab-port){
             width: 100%;
             padding: 4rem;
+        }
+
+        @include respond(phone){
+            padding: 1.5rem;
         }
     }
 }
